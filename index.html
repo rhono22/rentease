@@ -210,25 +210,165 @@ footer p{font-size:.7rem;color:var(--muted);}
 .mqi3 span.lit{color:rgba(232,201,106,.65);}
 
 
-@media(max-width:480px){
-  .htitle{font-size:clamp(2.8rem,16vw,5rem)!important;}
-  .hsub{font-size:.85rem;}
-  .btng,.btno{padding:12px 24px;font-size:.75rem;}
-  .spname{font-size:2.8rem!important;}
-  .spanel,.cam-panel,.drone-panel{padding:0 12px;}
-  .rp{font-size:.65rem;padding:7px 10px;}
+
 }
-@media(max-width:768px){
-  .htitle{font-size:clamp(3rem,12vw,6rem)!important;}
-  .track{width:92vw!important;height:62vw!important;}
-  nav{padding:14px 16px!important;}
+
+
+/* ============================================
+   COMPREHENSIVE MOBILE RESPONSIVE
+   ============================================ */
+
+/* Large tablet / small laptop */
+@media(max-width:1100px){
+  .htitle{font-size:clamp(3rem,9vw,7rem)!important;}
+  .spname{font-size:clamp(2.5rem,5.5vw,4.5rem)!important;}
+  .scene-panel,.spanel,.cam-panel,.drone-panel{max-width:280px;}
+  .thumb{width:58px;height:44px;}
+}
+
+/* Tablet */
+@media(max-width:900px){
+  /* Nav */
+  nav ul{display:none!important;}
+  nav{padding:14px 20px!important;}
+
+  /* Hero */
+  .htitle{font-size:clamp(3.2rem,13vw,6rem)!important;line-height:.92!important;}
+  .hsub{font-size:.88rem;max-width:90%;}
+  .hbtns{gap:10px;}
+  .btng,.btno{padding:12px 22px;font-size:.78rem;}
+
+  /* Vios scene panel */
+  .scene-panel,.spanel{
+    left:50%!important;right:auto!important;
+    top:auto!important;bottom:6vh!important;
+    transform:translateX(-50%)!important;
+    text-align:center;width:92%;max-width:none;
+    background:rgba(8,8,8,.75);
+    backdrop-filter:blur(10px);
+    padding:16px 20px;
+    border:1px solid rgba(232,201,106,.15);
+  }
+  .spname{font-size:2.2rem!important;line-height:.95!important;}
+  .spmodel{font-size:.75rem;margin-bottom:12px;}
+  .rlist{align-items:center;flex-direction:row!important;flex-wrap:wrap;justify-content:center;gap:6px!important;}
+  .rp{font-size:.65rem;padding:6px 10px;}
+  .spnote{border-left:none!important;border-top:2px solid #c0541a;padding-left:0!important;padding-top:8px;font-size:.7rem;}
+  .avail{justify-content:center;}
+
+  /* Cam panel */
+  .cam-panel{
+    left:50%!important;right:auto!important;
+    top:auto!important;bottom:6vh!important;
+    transform:translateX(-50%)!important;
+    text-align:center;width:92%;max-width:none;
+    background:rgba(8,8,8,.75);
+    backdrop-filter:blur(10px);
+    padding:16px 20px;
+    border:1px solid rgba(232,201,106,.15);
+  }
+
+  /* Drone panel */
+  .drone-panel{
+    left:50%!important;right:auto!important;
+    top:auto!important;bottom:6vh!important;
+    transform:translateX(-50%) translateY(0)!important;
+    text-align:center;width:92%;max-width:none;
+    background:rgba(8,8,8,.75);
+    backdrop-filter:blur(10px);
+    padding:16px 20px;
+    border:1px solid rgba(232,201,106,.15);
+  }
+  .stat-badges{justify-content:center;}
+
+  /* Track / image rotator */
+  .track{width:88vw!important;height:60vw!important;}
+
+  /* Thumbnails */
+  .thumbs{display:none!important;}
+
+  /* Rates */
   .rates{padding:60px 20px!important;}
-  .ctw{padding:60px 20px 50px!important;}
   .rgrid{grid-template-columns:1fr!important;}
-  footer{padding:20px!important;flex-direction:column;text-align:center;}
+  .sttl{font-size:2.8rem!important;}
+
+  /* Contact */
+  .ctw{padding:60px 20px 50px!important;}
+  .ctbox{padding:40px 20px!important;}
+  .ctlinks{flex-direction:column;align-items:center;}
+  .ctlink{width:100%;justify-content:center;}
+
+  /* Footer */
+  footer{padding:20px!important;flex-direction:column;text-align:center;gap:6px;}
+
+  /* Marquees */
+  .mqi span,.mqi2 span,.mqi3 span{font-size:1.1rem;padding:0 18px;}
 }
-@media(max-width:1024px){
-  .htitle{font-size:clamp(3.5rem,11vw,7rem)!important;}
+
+/* Mobile */
+@media(max-width:600px){
+  /* Hero */
+  .htitle{font-size:clamp(2.8rem,15vw,5rem)!important;}
+  .hc{padding:70px 16px 0!important;}
+  .hsub{font-size:.82rem;margin-bottom:28px;}
+  .hey{font-size:.62rem;}
+  .btng,.btno{padding:11px 18px;font-size:.74rem;letter-spacing:.1em;}
+
+  /* Scene panels — more compact */
+  .spanel,.cam-panel,.drone-panel{
+    bottom:4vh!important;
+    padding:12px 16px!important;
+  }
+  .spname{font-size:1.8rem!important;}
+  .spbadge{font-size:.56rem;}
+  .rlist{gap:4px!important;}
+  .rp{font-size:.6rem;padding:5px 8px;}
+  .spnote{font-size:.65rem;}
+  .avail{font-size:.58rem;}
+
+  /* Track */
+  .track{width:94vw!important;height:68vw!important;}
+
+  /* Cam float image */
+  .cam-float img{max-width:85vw!important;}
+
+  /* Angle label */
+  .alabel{bottom:28px;}
+  .aname{font-size:.55rem;}
+  .adot{width:5px;height:5px;}
+
+  /* Progress bar */
+  .pbar{height:2px;}
+
+  /* Rates */
+  .sttl{font-size:2.2rem!important;}
+  .slbl{font-size:.6rem;}
+  .rcard{padding:22px 18px;}
+  .rchead{font-size:.6rem;}
+  .rrow .rl{font-size:.74rem;}
+  .rrow .rpr{font-size:.8rem;}
+
+  /* Contact */
+  .ctbox{padding:32px 16px!important;}
+  .ctlink{padding:11px 20px;font-size:.75rem;}
+
+  /* Scroll hint */
+  .scrhint span{font-size:.55rem;}
+
+  /* Phase dots - drone */
+  .ph-dot{width:18px;}
+  .ph-dot.on{width:28px;}
+
+  /* Stat badges */
+  .sbadge{font-size:.58rem;padding:5px 10px;}
+}
+
+/* Small mobile */
+@media(max-width:380px){
+  .htitle{font-size:clamp(2.4rem,16vw,4rem)!important;}
+  .spname{font-size:1.6rem!important;}
+  .track{height:72vw!important;}
+  .rlist{flex-direction:column!important;}
 }
 
 </style>
@@ -529,8 +669,11 @@ function onScroll(){
   const panel=document.getElementById('spanel');
   if(prog>0.02&&prog<0.97){
     const t=Math.min(1,(prog-0.02)/0.1);
+    const mob=window.innerWidth<=900;
     panel.style.opacity=t;
-    panel.style.transform=`translateY(-50%) translateX(${(1-t)*-35}px)`;
+    panel.style.transform=mob
+      ? `translateX(-50%) translateY(${(1-t)*20}px)`
+      : `translateY(-50%) translateX(${(1-t)*-35}px)`;
   } else {
     panel.style.opacity='0';
   }
@@ -721,8 +864,11 @@ function dronScroll(){
   // Panel fade
   if(p > 0.08 && p < 0.96){
     const t = Math.min(1,(p-0.08)/0.1);
+    const mob=window.innerWidth<=900;
     dronepanel.style.opacity = t;
-    dronepanel.style.transform = 'translateY(-50%) translateX('+(1-t)*-32+'px)';
+    dronepanel.style.transform = mob
+      ? 'translateX(-50%) translateY('+(1-t)*20+'px)'
+      : 'translateY(-50%) translateX('+(1-t)*-32+'px)';
   } else {
     dronepanel.style.opacity = '0';
   }
